@@ -13,6 +13,9 @@ import HomePage from './Pages/HomePage/HomePage';
 import College from './Pages/College/College';
 import Admission from './Pages/Admission/Admission';
 import MyCollege from './Pages/MyCollege/MyCollege';
+import CollegeDetails from './Component/CollegeDetails';
+// import Login from './Shared/Login';
+// import Register from './Shared/Register';
 
 
 
@@ -40,6 +43,19 @@ const router = createBrowserRouter([
         path: "/MyCollege",
         element: <MyCollege></MyCollege>,
 
+      },
+      // {
+      //   path: "login",
+      //   element: <Login></Login>,
+      // },
+      // {
+      //   path: "register",
+      //   element: <Register></Register>,
+      // },
+      {
+        path: '/:id',
+        element: <CollegeDetails></CollegeDetails>,
+        loader: ({ params }) => fetch(`../public/College.json/${params.id}`)
       }
 
 

@@ -1,7 +1,28 @@
+// import { useContext } from "react";
 import { Link } from "react-router-dom";
+// import { AuthContext } from "../Providers/AuthProvider";
+// import { getAuth, signOut } from "firebase/auth";
+// import { app } from "../firebase/firebase.config";
+// import { useContext } from "react";
 
 
 const Header = () => {
+
+    // const { user } = useContext(AuthContext);
+    // // console.log(user)
+    // const auth = getAuth(app);
+    // // console.log(auth)
+    // const userr = auth.currentUser;
+
+    // const handelLogOut = () => {
+    //     signOut(auth)
+    //         .then(result => {
+    //             console.log(result)
+    //             setUser(null)
+
+    //         })
+    //         .catch(error => console.log(error))
+    // }
     const navOptions = (
         <>
             <li >
@@ -17,6 +38,35 @@ const Header = () => {
             <li >
                 <Link to="/myCollege">My College</Link>
             </li>
+            {/* <div className="navbar-end gap-4">
+                {
+                    user && <div className="tooltip" data-tip={userr.displayName}>
+                        {
+                            userr && <img className='photo' src={userr.photoURL} alt="" />
+                        }
+
+                    </div>
+                }
+
+
+                {/* {
+
+                    userr && <img className='photo' src={userr.photoURL} alt="" />
+                } */}
+
+
+
+
+            {/* 
+                {user ?
+                    <button onClick={handelLogOut} variant="primary">Logout</button> :
+                    <Link to="/login">
+                        <button> <Link className='' to="/login">login</Link></button>
+                    </Link>
+                } */}
+
+
+            {/* </div> */}
 
         </>
     );

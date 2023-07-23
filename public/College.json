@@ -5,6 +5,7 @@
         "Name": "ABC University",
         "AdmissionDate": "2023-09-01",
         "AdmissionProcess": "Online application and entrance exam",
+        "rating": "4",
         "events": [
             "Annual Cultural Fest",
             "Science Exhibition",
@@ -14,11 +15,12 @@
         "sportsCategory": "Basketball, Football, Table Tennis"
     },
     {
-        "id": "2001",
+        "id": "2",
         "Image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
         "Name": "XYZ College",
         "AdmissionDate": "2023-08-15",
         "AdmissionProcess": "Merit-based admission with counseling sessions.",
+        "rating": "4",
         "events": [
             "Tech Summit",
             "Literary Week",
@@ -28,11 +30,57 @@
         "sportsCategory": "Division II - Baseball, Swimming, Tennis, Track & Field."
     },
     {
-        "id": "3001",
+        "id": "3",
         "Image": "https://cdn.britannica.com/03/130603-050-37F7F535/Alliman-Administration-Center-Hesston-College-Mennonite-college.jpg",
         "Name": "PQR Institute of Technology",
         "AdmissionDate": "2023-07-30",
         "AdmissionProcess": "Entrance exam and personal interview.",
+        "rating": "4",
+        "events": [
+            "Tech Fest",
+            "Cultural Week",
+            "Innovation Symposium"
+        ],
+        "researchHistory": "Established in 1970, PQR Institute of Technology has a strong emphasis on engineering research and development.",
+        "sportsCategory": "Division III - Badminton, Table Tennis, Chess, Archery."
+    },
+    {
+        "id": "4",
+        "Image": "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+        "Name": "ABC University",
+        "AdmissionDate": "2023-09-01",
+        "AdmissionProcess": "Online application and entrance exam",
+        "rating": "4",
+        "events": [
+            "Annual Cultural Fest",
+            "Science Exhibition",
+            "Sports Meet"
+        ],
+        "researchHistory": "Established in 1950, ABC University has a rich history of groundbreaking research in various fields.",
+        "sportsCategory": "Basketball, Football, Table Tennis"
+    },
+    {
+        "id": "5",
+        "Image": "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+        "Name": "XYZ College",
+        "AdmissionDate": "2023-08-15",
+        "AdmissionProcess": "Merit-based admission with counseling sessions.",
+        "rating": "4",
+        "events": [
+            "Tech Summit",
+            "Literary Week",
+            "Entrepreneurship Conference"
+        ],
+        "researchHistory": "Founded in 1985, XYZ College has a strong research focus, particularly in the fields of Computer Science and Biotechnology.",
+        "sportsCategory": "Division II - Baseball, Swimming, Tennis, Track & Field."
+    },
+    {
+        "id": "6",
+        "Image": "https://cdn.britannica.com/03/130603-050-37F7F535/Alliman-Administration-Center-Hesston-College-Mennonite-college.jpg",
+        "Name": "PQR Institute of Technology",
+        "AdmissionDate": "2023-07-30",
+        "AdmissionProcess": "Entrance exam and personal interview.",
+        "rating": "4",
         "events": [
             "Tech Fest",
             "Cultural Week",
