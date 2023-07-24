@@ -18,6 +18,8 @@ import Login from './Shared/Login';
 import Register from './Shared/Register';
 import AuthProvider from './Providers/AuthProvider';
 import Enrollnow from './Pages/Admission/Enrollnow';
+import PrivateRoute from './PrivateRoutes/PrivateRoute';
+import ErrorPage from './Component/ErrorPage';
 
 
 
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -60,13 +63,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/:id',
-        element: <CollegeDetails></CollegeDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+        element: <PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://college-service-server-theta.vercel.app/menu/${params.id}`)
       },
       {
         path: 'college/:id',
-        element: <CollegeDetails></CollegeDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/menu/college/${params.id}`)
+        element: <PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://college-service-server-theta.vercel.app/college/${params.id}`)
       }
 
 

@@ -8,7 +8,7 @@ const Enrollnow = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/enroll', {
+        fetch('https://college-service-server-theta.vercel.app/enroll', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -19,7 +19,7 @@ const Enrollnow = () => {
             })
     };
     const onSubmite = data => {
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://college-service-server-theta.vercel.app/reviews', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

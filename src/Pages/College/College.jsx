@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 
 const College = ({ details }) => {
+
     const [college, setCollege] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/menu")
+        fetch("https://college-service-server-theta.vercel.app/menu")
 
             .then(res => res.json())
             .then(data => setCollege(data))
@@ -35,7 +36,7 @@ const College = ({ details }) => {
                                 <p>Sports: {details.sportsCategory}</p>
                                 <p>Sports: {details.rating}</p>
                                 <div className="card-actions justify-end">
-                                    <Link to={`${details.id}`}><button className="btn btn-primary">View Details</button></Link>
+                                    <Link to={`${college.id}`}><button className="btn btn-primary">View Details</button></Link>
                                 </div>
                             </div>
                         </div>

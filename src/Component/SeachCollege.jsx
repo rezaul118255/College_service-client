@@ -1,32 +1,26 @@
-// import { useEffect, useState } from "react";
+
 
 import { useEffect } from "react";
 import { useState } from "react";
 import Colleges from "./Colleges";
 
-
-// import { useEffect, useState } from "react";
-
-// import Colleges from "./Colleges";
-
-
 const SeachCollege = () => {
 
     const [college, setCollege] = useState([])
-    const [myToys, setMyToys] = useState([])
+
     const [searchText, setSearchText] = useState("");
 
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/menu/getToysByText/${searchText}`)
+        fetch(`https://college-service-server-theta.vercel.app/menu/getToysByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                setMyToys(data);
+                setCollege(data);
             });
     };
     useEffect(() => {
-        fetch("http://localhost:5000/menu")
+        fetch("https://college-service-server-theta.vercel.app/menu")
 
             .then(res => res.json())
             .then(data => setCollege(data))

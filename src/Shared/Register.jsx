@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react';
-import img from '../assets/photo-1607237138185-eedd9c632b0b.jpg'
+import img from '../assets/undraw_Login_re_4vu2.png'
 
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';

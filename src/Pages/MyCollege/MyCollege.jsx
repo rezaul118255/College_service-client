@@ -7,7 +7,7 @@ const MyCollege = () => {
     const [MyColleges, setMyCollege] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/enrolled/${user?.email}`)
+        fetch(`https://college-service-server-theta.vercel.app/enrolled/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyCollege(data))
     }, [user])
