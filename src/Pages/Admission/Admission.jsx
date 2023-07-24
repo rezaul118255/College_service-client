@@ -13,6 +13,15 @@ const Admission = () => {
     }, [])
     return (
         <div>
+            <div className='text-center'>
+                <p className='text-yellow-500 text-3xl'> All College </p>
+                <div className='border-y-4 border-gray-600 w-4/12 mx-auto m-4 text-2xl'>
+                    <h5>Enroll Your favarite  College</h5>
+
+                </div>
+
+
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {
                     college.map(details => (
