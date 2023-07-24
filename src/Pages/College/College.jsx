@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const College = ({ details }) => {
     const [college, setCollege] = useState([])
     useEffect(() => {
-        fetch("../../../public/College.json")
+        fetch("http://localhost:5000/menu")
 
             .then(res => res.json())
             .then(data => setCollege(data))

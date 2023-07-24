@@ -13,9 +13,12 @@ import Colleges from "./Colleges";
 const SeachCollege = () => {
 
     const [college, setCollege] = useState([])
+    const [myToys, setMyToys] = useState([])
+    const [searchText, setSearchText] = useState("");
+
 
     const handleSearch = () => {
-        fetch(`..//${searchText}`)
+        fetch(`http://localhost:5000/menu/getToysByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -23,7 +26,7 @@ const SeachCollege = () => {
             });
     };
     useEffect(() => {
-        fetch("../../public/College.json")
+        fetch("http://localhost:5000/menu")
 
             .then(res => res.json())
             .then(data => setCollege(data))
@@ -32,15 +35,13 @@ const SeachCollege = () => {
 
     return (
         <div className="w-full">
-            <div className="form-control mx-auto">
-                <div className="search-box p-2 text-center">
-                    <input
-                        onChange={(e) => setSearchText(e.target.value)}
-                        type="text"
-                        className="p-1"
-                    />{" "}
-                    <button onClick={handleSearch}>Search</button>
-                </div>
+            <div className="search-box p-2 text-center">
+                <input
+                    onChange={(e) => setSearchText(e.target.value)}
+                    type="text"
+                    className="p-1"
+                />{" "}
+                <button onClick={handleSearch}>Search</button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

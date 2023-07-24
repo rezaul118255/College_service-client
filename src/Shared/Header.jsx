@@ -1,28 +1,30 @@
-// import { useContext } from "react";
+
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../Providers/AuthProvider";
-// import { getAuth, signOut } from "firebase/auth";
-// import { app } from "../firebase/firebase.config";
-// import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+import { getAuth, signOut } from "firebase/auth";
+import { app } from "../firebase/firebase.config";
+import "./Header.css"
 
 
 const Header = () => {
 
-    // const { user } = useContext(AuthContext);
-    // // console.log(user)
-    // const auth = getAuth(app);
-    // // console.log(auth)
-    // const userr = auth.currentUser;
+    const { user } = useContext(AuthContext);
+    console.log(user)
+    console.log(user)
+    const auth = getAuth(app);
+    console.log(auth)
+    const userr = auth.currentUser;
 
-    // const handelLogOut = () => {
-    //     signOut(auth)
-    //         .then(result => {
-    //             console.log(result)
-    //             setUser(null)
+    const handelLogOut = () => {
+        signOut(auth)
+            .then(result => {
+                console.log(result)
+                setUser(null)
 
-    //         })
-    //         .catch(error => console.log(error))
-    // }
+            })
+            .catch(error => console.log(error))
+    }
     const navOptions = (
         <>
             <li >
@@ -38,35 +40,8 @@ const Header = () => {
             <li >
                 <Link to="/myCollege">My College</Link>
             </li>
-            {/* <div className="navbar-end gap-4">
-                {
-                    user && <div className="tooltip" data-tip={userr.displayName}>
-                        {
-                            userr && <img className='photo' src={userr.photoURL} alt="" />
-                        }
-
-                    </div>
-                }
 
 
-                {/* {
-
-                    userr && <img className='photo' src={userr.photoURL} alt="" />
-                } */}
-
-
-
-
-            {/* 
-                {user ?
-                    <button onClick={handelLogOut} variant="primary">Logout</button> :
-                    <Link to="/login">
-                        <button> <Link className='' to="/login">login</Link></button>
-                    </Link>
-                } */}
-
-
-            {/* </div> */}
 
         </>
     );
@@ -113,7 +88,7 @@ const Header = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">{navOptions}</ul>
                 </div>
-                {/* <div className="navbar-end gap-4">
+                <div className="navbar-end gap-4">
                     {user && (
                         <div className="tooltip" data-tip={userr.displayName}>
                             {userr && <img className="photo" src={userr.photoURL} alt="" />}
@@ -132,7 +107,7 @@ const Header = () => {
                             </button>
                         </Link>
                     )}
-                </div> */}
+                </div>
             </div>
         </>
 

@@ -14,8 +14,10 @@ import College from './Pages/College/College';
 import Admission from './Pages/Admission/Admission';
 import MyCollege from './Pages/MyCollege/MyCollege';
 import CollegeDetails from './Component/CollegeDetails';
-// import Login from './Shared/Login';
-// import Register from './Shared/Register';
+import Login from './Shared/Login';
+import Register from './Shared/Register';
+import AuthProvider from './Providers/AuthProvider';
+import Enrollnow from './Pages/Admission/Enrollnow';
 
 
 
@@ -44,18 +46,27 @@ const router = createBrowserRouter([
         element: <MyCollege></MyCollege>,
 
       },
-      // {
-      //   path: "login",
-      //   element: <Login></Login>,
-      // },
-      // {
-      //   path: "register",
-      //   element: <Register></Register>,
-      // },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/enroll",
+        element: <Enrollnow></Enrollnow>,
+      },
       {
         path: '/:id',
         element: <CollegeDetails></CollegeDetails>,
-        loader: ({ params }) => fetch(`../public/College.json/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+      },
+      {
+        path: 'college/:id',
+        element: <CollegeDetails></CollegeDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/menu/college/${params.id}`)
       }
 
 
@@ -67,6 +78,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
